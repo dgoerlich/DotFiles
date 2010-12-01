@@ -3,3 +3,6 @@
 	status = auto
 	diff = auto
 	ui = auto
+[user]
+	name = Dave Goerlich
+	email = dgoerlich@designinginteractive.com
