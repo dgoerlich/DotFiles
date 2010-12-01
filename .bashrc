@@ -77,3 +77,4 @@ source $HOME/.rvm/scripts/rvm
 
 alias cwip='cucumber -p wip'
 alias cuke='cucumber --tags ~@backlog'
+alias ci='cuke; cwip'
