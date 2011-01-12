@@ -5,6 +5,13 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
+function parse_git_branch {
+  ref=$(git symbolic-ref HEAD 2> /dev/null) || return
+  echo "→ ${ref#refs/heads/}"
+}
+
+PS1="[\W \$(parse_git_branch)] $ "
+
 # User specific aliases and functions
 alias v='gvim '
 alias pa='~/tools/pa'
