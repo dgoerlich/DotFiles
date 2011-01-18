@@ -43,11 +43,10 @@ git_prompt() {
     fi
 }
 
-PS1="\n[\W] \$(git_prompt) → "
+PS1="[\W] \$(git_prompt) → "
 
 # User specific aliases and functions
 alias v='gvim '
-alias pa='~/tools/pa'
 
 alias gs='git status'
 alias ga='git add -A'
@@ -70,23 +69,17 @@ alias phpdoc='cd /source/phpdocumentor'
 alias vphp='~/tools/phpdocumentor'
 
 alias arg='cd /source/applications/arg'
-alias varg='~/tools/arg'
 
 alias univ='cd /source/applications/university'
 alias univt='cd /source/applications/universitytemplates'
-alias vuniv='~/tools/univ'
-alias vunivt='~/tools/univ-t'
 
 alias univr='cd /source/ruby/prfessoronrails/'
 
 alias s5='cd /source/applications/simpli5'
-alias vs5='~/tools/s5'
 
 alias writer='cd /source/applications/writer'
-alias vwriter='~/tools/writer'
 
 alias bt='cd /source/applications/badgetracker'
-alias vbt='~/tools/bt'
 
 alias sql='mysql '
 alias vsql='~/tools/sql/editsql'
