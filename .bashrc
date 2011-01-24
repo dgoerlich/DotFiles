@@ -26,21 +26,20 @@ function minutes_since_last_commit {
 }
 
 git_prompt() {
-    local g="$(__gitdir)"
-    if [ -n "$g" ]; then
-        local MINUTES_SINCE_LAST_COMMIT=`minutes_since_last_commit`
-        if [ "$MINUTES_SINCE_LAST_COMMIT" -gt 30 ]; then
-            local COLOR=${RED}
-        elif [ "$MINUTES_SINCE_LAST_COMMIT" -gt 10 ]; then
-            local COLOR=${YELLOW}
-        else
-            local COLOR=${GREEN}
-        fi
+  # The __git_ps1 function inserts the current git branch where %s is
+  local GIT_BRANCH=`__git_ps1 "%s"`
 
-        # The __git_ps1 function inserts the current git branch where %s is
-        local GIT_BRANCH=`__git_ps1 "%s"`
-        PS1="[\W] ${GIT_BRANCH} ${COLOR}$(minutes_since_last_commit)m${NORMAL} $ "
-    fi
+  local MINUTES_SINCE_LAST_COMMIT=`minutes_since_last_commit`
+
+  if [ "$MINUTES_SINCE_LAST_COMMIT" -gt 30 ]; then
+    local COLOR=${RED}
+  elif [ "$MINUTES_SINCE_LAST_COMMIT" -gt 10 ]; then
+    local COLOR=${YELLOW}
+  else
+    local COLOR=${GREEN}
+  fi
+
+  PS1="[\W] ${GIT_BRANCH} ${COLOR}${MINUTES_SINCE_LAST_COMMIT}m${NORMAL} $ "
 }
 
 set_prompt() {
