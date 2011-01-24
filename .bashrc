@@ -11,11 +11,11 @@ source ~/.dotfiles/.gittabcomplete
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 
-YELLOW='\033[1;33m'
-BLUE='\033[1;34m'
-GREEN='\033[1;32m'
-RED='\033[0;31m'
-NORMAL='\033[00m'
+YELLOW='\[\033[1;33m\]'
+BLUE='\[\033[1;34m\]'
+GREEN='\[\033[1;32m\]'
+RED='\[\033[0;31m\]'
+NORMAL='\[\033[00m\]'
 
 function minutes_since_last_commit {
     now=`date +%s`
@@ -36,14 +36,23 @@ git_prompt() {
         else
             local COLOR=${GREEN}
         fi
-        local SINCE_LAST_COMMIT="\n ${COLOR}$(minutes_since_last_commit)m${NORMAL}"
+
         # The __git_ps1 function inserts the current git branch where %s is
-        local GIT_PROMPT=`__git_ps1 "%s ${SINCE_LAST_COMMIT}"`
-        echo ${GIT_PROMPT}
+        local GIT_BRANCH=`__git_ps1 "%s"`
+        PS1="[\W] ${GIT_BRANCH} ${COLOR}$(minutes_since_last_commit)m${NORMAL} $ "
     fi
 }
 
-PS1="[\W] \$(git_prompt) → "
+set_prompt() {
+    local g="$(__gitdir)"
+    if [ -n "$g" ]; then
+      git_prompt
+    else
+      PS1="[\W] $ "
+    fi
+}
+
+PROMPT_COMMAND=set_prompt
 
 # User specific aliases and functions
 alias v='gvim '
