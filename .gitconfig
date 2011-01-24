@@ -5,4 +5,12 @@
 	ui = auto
 [user]
 	name = Dave Goerlich
-	email = dgoerlich@designinginteractive.com
+  email = dgoerlich@designinginteractive.com
+[alias]
+  co = checkout
+  ci = commit
+  st = status
+  br = branch
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  type = cat-file -t
+  dump = cat-file -p
