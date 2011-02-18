@@ -54,7 +54,7 @@ set_prompt() {
 PROMPT_COMMAND=set_prompt
 
 # User specific aliases and functions
-alias v='gvim '
+alias v='vim '
 
 alias gs='git status'
 alias ga='git add -A'
