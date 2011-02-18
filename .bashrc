@@ -55,6 +55,7 @@ PROMPT_COMMAND=set_prompt
 
 # User specific aliases and functions
 alias v='vim '
+alias gv='gvim '
 
 alias gs='git status'
 alias ga='git add -A'
