@@ -1,0 +1,16 @@
+alias phpdoc='cd /source/phpdocumentor'
+alias database='cd ~/Database'
+
+alias sandstone='cd /source/sandstone'
+
+alias arg='cd /source/applications/arg'
+
+alias univ='cd /source/applications/university'
+alias univt='cd /source/applications/universitytemplates'
+alias univr='cd /source/ruby/prfessoronrails/'
+
+alias s5='cd /source/applications/simpli5'
+
+alias writer='cd /source/applications/writer'
+
+alias bt='cd /source/applications/badgetracker'

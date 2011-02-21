@@ -1,0 +1,7 @@
+alias sql='mysql '
+alias vsql='~/tools/sql/editsql'
+
+alias runsql='~/tools/sql/runsql'
+alias devsql='~/tools/sql/devsql'
+alias prodsql='~/tools/sql/prodsql'
+alias prod2sql='~/tools/sql/prod2sql'

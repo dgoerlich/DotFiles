@@ -1,0 +1,3 @@
+alias memstart='memcached -d -m 5 -l 127.0.0.1 -p 11211';
+alias memstop='killall memcached';
+alias memreset='memstop; memstart';

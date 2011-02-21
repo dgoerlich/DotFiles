@@ -1,0 +1,3 @@
+alias sshprod1='ssh dgoerlic@server001.designinginteractive.com'
+alias sshprod2='ssh dgoerlic@server002.designinginteractive.com'
+alias sshprod3='ssh dgoerlich@server003.designinginteractive.com'
