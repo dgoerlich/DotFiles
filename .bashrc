@@ -16,5 +16,6 @@ source ~/.dotfiles/vim.alias
 source ~/.dotfiles/quickjump.alias
 source ~/.dotfiles/sandstone.alias
 source ~/.dotfiles/sql.alias
+source ~/.dotfiles/ssh.alias
 source ~/.dotfiles/memcahce.alias
 source ~/.dotfiles/cucumber.alias
