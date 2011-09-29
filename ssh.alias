@@ -1,3 +1,3 @@
-alias sshprod1='ssh dgoerlic@server001.designinginteractive.com'
 alias sshprod2='ssh dgoerlic@server002.designinginteractive.com'
-alias sshprod3='ssh dgoerlich@server003.designinginteractive.com'
+alias sshprod3='ssh dgoerlic@server003.designinginteractive.com'
+alias sshrcs='ssh root@96.126.107.234'

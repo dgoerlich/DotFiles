@@ -4,7 +4,7 @@
 	diff = auto
 	ui = auto
 [user]
-	name = Dave Goerlich
+	name = Dave Goerlich\n
   email = dgoerlich@designinginteractive.com
 [alias]
   co = checkout
