@@ -7,8 +7,8 @@ fi
 
 source ~/.dotfiles/gittabcomplete.bashrc
 source ~/.dotfiles/prompt.bashrc
-source $HOME/.rvm/scripts/rvm
 source ~/.dotfiles/ec2.bashrc
+source ~/.dotfiles/rbenv.bashrc
 
 # User specific aliases and functions
 source ~/.dotfiles/git.alias
