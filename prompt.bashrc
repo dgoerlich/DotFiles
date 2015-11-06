@@ -42,5 +42,9 @@ set_prompt() {
     fi
 }
 
-PROMPT_COMMAND=set_prompt
+. /etc/profile.d/vte.sh
+
+NEW_PROMPT=set_prompt
+
+PROMPT_COMMAND="${NEW_PROMPT};__vte_prompt_command"
 
