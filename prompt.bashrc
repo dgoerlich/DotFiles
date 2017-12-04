@@ -33,18 +33,10 @@ git_prompt() {
   PS1="[\W] ${GIT_BRANCH} ${COLOR}${MINUTES_SINCE_LAST_COMMIT}m${NORMAL} $ "
 }
 
-set_prompt() {
-    local g="$(__gitdir)"
-    if [ -n "$g" ]; then
-      git_prompt
-    else
-      PS1="[\W] $ "
-    fi
-}
+g="$(__gitdir)"
 
-. /etc/profile.d/vte.sh
-
-NEW_PROMPT=set_prompt
-
-PROMPT_COMMAND="${NEW_PROMPT};__vte_prompt_command"
-
+if [ -n "$g" ]; then
+  git_prompt
+else
+  PS1="[\W] $ "
+fi
