@@ -33,10 +33,13 @@ git_prompt() {
   PS1="[\W] ${GIT_BRANCH} ${COLOR}${MINUTES_SINCE_LAST_COMMIT}m${NORMAL} $ "
 }
 
-g="$(__gitdir)"
+set_prompt() {
+    local g="$(__gitdir)"
+    if [ -n "$g" ]; then
+      git_prompt
+    else
+      PS1="[\W] $ "
+    fi
+}
 
-if [ -n "$g" ]; then
-  git_prompt
-else
-  PS1="[\W] $ "
-fi
+PROMPT_COMMAND="set_prompt"
